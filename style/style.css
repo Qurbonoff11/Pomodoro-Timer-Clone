@@ -1,0 +1,285 @@
+/* FONT LINK */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+/* ROOTS */
+:root{
+  /* COLOR */
+  --dark: #000;
+  --white: #fff;
+  --open-danger: #E1B9B9;
+  --danger: #BA4949;
+  --dark-danger: #AB4343;
+  --red: #C15C5C;
+  --dark-red: #A44E4E;
+  --green: #38858A;
+  --openGreen: #4C9196;
+  --blue: #397097;
+  --openBlue: #4D7FA2;
+  --gray: #cfcfcf;
+
+  /* FONT FAMILY */
+  --comfortaa: "Comfortaa";
+  --arial: Arial, Helvetica, sans-serif;
+
+  /* FONT SIZE */
+  --fs-12: 12px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-22: 22px;
+  --fs-120: 120px;
+
+  /* FONT WEIGHT */
+  --fw-3: 300;
+  --fw-4: 500;
+  --fw-7: 700;
+}
+
+/* Universal selectors */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--arial);
+}
+
+ul,
+ol{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--danger);
+}
+
+/* ============== HEADER ============== */
+
+.header{
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .navbar{
+  width: 35%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--dark);
+}
+
+.header .navbar .logo{
+  color: var(--white);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-7);
+  font-family: var(--arial);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 5px;
+}
+
+.header .navbar .logo-img{
+  height: var(--fs-20);
+}
+
+.header .navbar .link--list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .7rem;
+}
+
+.header .navbar .link--list .nav--btn{
+  padding: .7rem;
+  background-color: var(--red);
+  border: none;
+  border-radius: .3rem;
+  font-size: var(--fs-12);
+  color: var(--white);
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.header .navbar .link--list .nav--btn:hover{
+  filter: brightness(95%);
+}
+
+.header .navbar .link--list .nav--btn i {
+  font-size: var(--fs-16);
+}
+
+.header .navbar .link--list #menuBtn{
+  font-weight: var(--fw-7);
+}
+
+/* ============== SECTION-1 ============== */
+
+.hero--section{
+  width: 100%;
+  height: 100%;
+}
+
+.container-class{
+  width: 30%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero--section .container{
+  background-color: var(--red);
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero--section .container ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero--section .container ul .timer--btn{
+  padding: 3px 12px;
+  font-size: var(--fs-18);
+  font-weight: var(--fw-3);
+  color: var(--white);
+  background-color: transparent;
+  border: 0;
+  border-radius: .3rem;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+
+.hero--section .container ul .active-btn{
+  background-color: var(--dark-red);
+  outline: none;
+}
+
+.hero--section .container ul .timer--btn:active{
+  transform: translateY(5px);
+}
+
+
+
+.hero--section .container .timer{
+  color: var(--white);
+  font-weight: var(--fw-7);
+  font-size: var(--fs-120);
+}
+
+.hero--section .container .start--btn{
+  padding: 1rem 4rem;
+  border: 0;
+  color: var(--danger);
+  font-size: var(--fs-22);
+  border-radius: .4rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-4);
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+
+.hero--section .container .start--btn:active{
+  transform: translateY(5px);
+}
+
+.hero--section .text-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.hero--section .text-card p{
+  color: var(--gray);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-4);
+}
+.hero--section .text-card h5{
+  color: var(--white);
+  font-size: var(--fs-18);
+  font-weight: var(--fw-4);
+}
+
+.hero--section .tasks-cont{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid var(--dark);
+  padding: 1rem 0;
+}
+
+.hero--section .tasks-cont h4{
+  font-size: var(--fs-18);
+  color: var(--white);
+  font-weight: var(--fw-7);
+}
+
+.hero--section .tasks-cont .menu--btn{
+  padding: .7rem;
+  background-color: var(--red);
+  border: none;
+  border-radius: .3rem;
+  font-size: var(--fs-16);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: var(--fw-7);
+  transition: all .3s ease-in-out;
+}
+
+.hero--section .tasks-cont .menu--btn:hover{
+  filter: brightness(95%);
+}
+
+.hero--section .add-task-btn{
+  width: 100%;
+  height: 4rem;
+  background-color: var(--dark-danger);
+  border: 2px dashed var(--open-danger);
+  border-radius: .3rem;
+  color: var(--open-danger);
+  font-size: var(--fs-18);
+  font-weight: var(--fw-7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.hero--section .add-task-btn i {
+  font-weight: var(--fw-3);
+  font-size: var(--fs-22);
+}
+
+.hero--section .add-task-btn:hover{
+  filter: brightness(95%);
+}
