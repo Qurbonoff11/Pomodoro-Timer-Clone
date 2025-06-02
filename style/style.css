@@ -27,6 +27,8 @@
   --fs-18: 18px;
   --fs-20: 20px;
   --fs-22: 22px;
+  --fs-32: 32px;
+  --fs-42: 42px;
   --fs-120: 120px;
 
   /* FONT WEIGHT */
@@ -192,7 +194,14 @@ body{
   font-size: var(--fs-120);
 }
 
-.hero--section .container .start--btn{
+.hero--section .container .buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero--section .container .buttons .start--btn{
   padding: 1rem 4rem;
   border: 0;
   color: var(--danger);
@@ -202,6 +211,18 @@ body{
   font-weight: var(--fw-4);
   cursor: pointer;
   transition: all .1s ease-in-out;
+}
+
+.hero--section .container .buttons .reset-btn{
+  font-size: var(--fs-42);
+  color: var(--white);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.hero--section .container .buttons .reset-btn:active{
+  transform: translateY(5px);
 }
 
 .hero--section .container .start--btn:active{
